@@ -14,9 +14,15 @@ class ResultActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        supportActionBar?.hide()
+
         Log.d(TAG, "onCreate Callback invoked")
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_result)
+        binding = DataBindingUtil.setContentView(
+            this,
+            R.layout.activity_result
+        )
 
         val bundle = intent.extras
 
@@ -25,12 +31,16 @@ class ResultActivity : AppCompatActivity() {
             val score = bundle.getInt("EXTRA_SCORE", 0)
 
             binding.tvNameResult.text = "Congratulations, $name!"
-            binding.tvScore.text = "Your Score: $score / 100"
+            binding.tvScore.text = "$score / 100"
         }
 
         binding.btnRestart.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+
+            intent.flags =
+                Intent.FLAG_ACTIVITY_CLEAR_TOP or
+                        Intent.FLAG_ACTIVITY_NEW_TASK
+
             startActivity(intent)
             finish()
         }
