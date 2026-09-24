@@ -14,15 +14,25 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        supportActionBar?.hide()
+
         Log.d(TAG, "onCreate Callback invoked")
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(
+            this,
+            R.layout.activity_main
+        )
 
         binding.btnStart.setOnClickListener {
             val name = binding.etName.text.toString().trim()
 
             if (name.isEmpty()) {
-                Toast.makeText(this, "Please enter your name!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    "Please enter your name!",
+                    Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
 

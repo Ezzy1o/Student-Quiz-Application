@@ -22,56 +22,56 @@ class QuizActivity : AppCompatActivity() {
     private val questions = listOf(
 
         Question(
-            "What is the main purpose of a firewall?",
+            "What is the capital city of Malaysia?",
             listOf(
-                "A) To increase internet speed",
-                "B) To protect a network by controlling incoming and outgoing traffic",
-                "C) To create a backup of files",
-                "D) To remove unused applications"
+                "Johor Bahru",
+                "Kuala Lumpur",
+                "Putrajaya",
+                "Ipoh"
             ),
             1
         ),
 
         Question(
-            "What is phishing?",
+            "Which is the largest state in Malaysia by land area?",
             listOf(
-                "A) A method of encrypting files",
-                "B) A type of network cable",
-                "C) An attempt to trick users into revealing sensitive information",
-                "D) A method of creating strong passwords"
-            ),
-            2
-        ),
-
-        Question(
-            "Which of the following is the strongest password?",
-            listOf(
-                "A) password123",
-                "B) 12345678",
-                "C) admin2026",
-                "D) T!g8#Qz2@Lm9"
+                "Selangor",
+                "Pahang",
+                "Sabah",
+                "Sarawak"
             ),
             3
         ),
 
         Question(
-            "What is malware?",
+            "What is the national flower of Malaysia?",
             listOf(
-                "A) Software designed to harm, disrupt, or gain unauthorized access to a computer system",
-                "B) Software used to edit documents",
-                "C) A secure type of password",
-                "D) A network monitoring device"
+                "Hibiscus (Bunga Raya)",
+                "Orchid",
+                "Jasmine",
+                "Sunflower"
             ),
             0
         ),
 
         Question(
-            "What is the main purpose of encryption?",
+            "How many states are there in Malaysia?",
             listOf(
-                "A) To make a computer run faster",
-                "B) To convert data into a form that unauthorized users cannot easily understand",
-                "C) To delete unnecessary files",
-                "D) To increase storage capacity"
+                "11",
+                "12",
+                "13",
+                "14"
+            ),
+            2
+        ),
+
+        Question(
+            "Mount Kinabalu is located in which Malaysian state?",
+            listOf(
+                "Sarawak",
+                "Sabah",
+                "Perak",
+                "Pahang"
             ),
             1
         )
@@ -102,7 +102,7 @@ class QuizActivity : AppCompatActivity() {
             bundleFromMain?.getString("EXTRA_NAME", "Student")
                 ?: "Student"
 
-        binding.tvWelcome.text = "Student: $studentName"
+        binding.tvWelcome.text = "Hi, $studentName 👋"
 
         showQuestion()
 

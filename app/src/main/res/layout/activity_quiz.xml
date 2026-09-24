@@ -1,110 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/bg_quiz_screen"
         android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="24dp">
+            android:paddingStart="24dp"
+            android:paddingTop="40dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="32dp">
 
+            <!-- Badge -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_quiz_badge"
+                android:paddingStart="14dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="8dp"
+                android:text="@string/quiz_badge_quiz"
+                android:textColor="#4F46E5"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <!-- Welcome -->
             <TextView
                 android:id="@+id/tvWelcome"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Student: -"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="24dp" />
+                android:layout_marginTop="28dp"
+                android:text="@string/quiz_welcome_default"
+                android:textColor="#0F172A"
+                android:textSize="27sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvQuestionProgress"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Choose the best answer for each question."
+                android:textColor="#64748B"
+                android:textSize="15sp" />
+
+            <!-- Progress -->
+            <TextView
+                android:id="@+id/tvQuestionProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
                 android:text="Question 1 of 5"
-                android:textSize="14sp"
-                android:layout_marginBottom="12dp" />
+                android:textColor="#475569"
+                android:textSize="13sp"
+                android:textStyle="bold" />
 
             <ProgressBar
                 android:id="@+id/progressQuiz"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
-                android:layout_height="8dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="10dp"
                 android:max="5"
                 android:progress="1"
-                android:layout_marginBottom="32dp" />
+                android:progressBackgroundTint="#E2E8F0"
+                android:progressTint="#4F46E5" />
 
-            <TextView
-                android:id="@+id/tvQuestion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Question"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="20dp" />
-
-            <RadioGroup
-                android:id="@+id/rgAnswers"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp">
-
-                <RadioButton
-                    android:id="@+id/rbAnswerA"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Answer A"
-                    android:padding="8dp" />
-
-                <RadioButton
-                    android:id="@+id/rbAnswerB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Answer B"
-                    android:padding="8dp" />
-
-                <RadioButton
-                    android:id="@+id/rbAnswerC"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Answer C"
-                    android:padding="8dp" />
-
-                <RadioButton
-                    android:id="@+id/rbAnswerD"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Answer D"
-                    android:padding="8dp" />
-
-            </RadioGroup>
-
+            <!-- Question Card -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginTop="28dp"
+                android:background="@drawable/bg_quiz_card"
+                android:elevation="5dp"
+                android:orientation="vertical"
+                android:padding="20dp">
 
-                <Button
-                    android:id="@+id/btnPrevious"
-                    android:layout_width="0dp"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Previous"
-                    android:layout_marginEnd="8dp" />
+                    android:text="QUESTION"
+                    android:textColor="#64748B"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/btnNext"
-                    android:layout_width="0dp"
+                <TextView
+                    android:id="@+id/tvQuestion"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Next"
-                    android:layout_marginStart="8dp" />
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="Question goes here"
+                    android:textColor="#0F172A"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgAnswers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAnswerA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_answer_option"
+                        android:buttonTint="#4F46E5"
+                        android:gravity="center_vertical"
+                        android:minHeight="62dp"
+                        android:paddingStart="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="12dp"
+                        android:text="Answer A"
+                        android:textColor="#334155"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbAnswerB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_answer_option"
+                        android:buttonTint="#4F46E5"
+                        android:gravity="center_vertical"
+                        android:minHeight="62dp"
+                        android:paddingStart="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="12dp"
+                        android:text="Answer B"
+                        android:textColor="#334155"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbAnswerC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_answer_option"
+                        android:buttonTint="#4F46E5"
+                        android:gravity="center_vertical"
+                        android:minHeight="62dp"
+                        android:paddingStart="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="12dp"
+                        android:text="Answer C"
+                        android:textColor="#334155"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbAnswerD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_answer_option"
+                        android:buttonTint="#4F46E5"
+                        android:gravity="center_vertical"
+                        android:minHeight="62dp"
+                        android:paddingStart="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="12dp"
+                        android:text="Answer D"
+                        android:textColor="#334155"
+                        android:textSize="14sp" />
+
+                </RadioGroup>
 
             </LinearLayout>
+
+            <!-- Navigation -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPrevious"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_secondary_button"
+                    android:text="@string/quiz_prev"
+                    android:textAllCaps="false"
+                    android:textColor="#4F46E5"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_quiz_button"
+                    android:text="@string/quiz_next"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:gravity="center"
+                android:text="@string/footer_text"
+                android:textColor="#94A3B8"
+                android:textSize="11sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
