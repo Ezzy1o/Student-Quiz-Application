@@ -21,116 +21,93 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="24dp" />
 
-            <!-- Question 1 -->
             <TextView
+                android:id="@+id/tvQuestionProgress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1. What is the main purpose of a firewall?"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
+                android:text="Question 1 of 5"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp" />
 
-            <RadioGroup
-                android:id="@+id/rgQ1"
+            <ProgressBar
+                android:id="@+id/progressQuiz"
+                style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp">
-                <RadioButton android:id="@+id/q1a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A) To increase internet speed" />
-                <RadioButton android:id="@+id/q1b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="B) To protect a network by controlling incoming and outgoing traffic" />
-                <RadioButton android:id="@+id/q1c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="C) To create a backup of files" />
-                <RadioButton android:id="@+id/q1d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="D) To remove unused applications" />
-            </RadioGroup>
+                android:layout_height="8dp"
+                android:max="5"
+                android:progress="1"
+                android:layout_marginBottom="32dp" />
 
-            <!-- Question 2 -->
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/tvQuestion"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2. What is phishing?"
+                android:text="Question"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="20dp" />
 
             <RadioGroup
-                android:id="@+id/rgQ2"
+                android:id="@+id/rgAnswers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp">
-                <RadioButton android:id="@+id/q2a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A) A method of encrypting files" />
-                <RadioButton android:id="@+id/q2b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="B) A type of network cable" />
-                <RadioButton android:id="@+id/q2c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="C) An attempt to trick users into revealing sensitive information" />
-                <RadioButton android:id="@+id/q2d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="D) A method of creating strong passwords" />
+                android:layout_marginBottom="32dp">
+
+                <RadioButton
+                    android:id="@+id/rbAnswerA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Answer A"
+                    android:padding="8dp" />
+
+                <RadioButton
+                    android:id="@+id/rbAnswerB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Answer B"
+                    android:padding="8dp" />
+
+                <RadioButton
+                    android:id="@+id/rbAnswerC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Answer C"
+                    android:padding="8dp" />
+
+                <RadioButton
+                    android:id="@+id/rbAnswerD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Answer D"
+                    android:padding="8dp" />
+
             </RadioGroup>
 
-
-            <!-- Question 3 -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3. Which of the following is the strongest password?"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
-
-            <RadioGroup
-                android:id="@+id/rgQ3"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp">
-                <RadioButton android:id="@+id/q3a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A) password123" />
-                <RadioButton android:id="@+id/q3b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="B) 12345678" />
-                <RadioButton android:id="@+id/q3c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="C) admin2026" />
-                <RadioButton android:id="@+id/q3d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="D) T!g8#Qz2@Lm9" />
-            </RadioGroup>
+                android:orientation="horizontal">
 
+                <Button
+                    android:id="@+id/btnPrevious"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Previous"
+                    android:layout_marginEnd="8dp" />
 
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Next"
+                    android:layout_marginStart="8dp" />
 
-
-
-
-
-            <!-- Question 4 -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4. What is malware?"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
-
-            <RadioGroup
-                android:id="@+id/rgQ4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp">
-                <RadioButton android:id="@+id/q4a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A) Software designed to harm, disrupt, or gain unauthorized access to a computer system" />
-                <RadioButton android:id="@+id/q4b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="B) Software used to edit documents" />
-                <RadioButton android:id="@+id/q4c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="C) A secure type of password" />
-                <RadioButton android:id="@+id/q4d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="D) A network monitoring device" />
-            </RadioGroup>
-
-
-
-            <!-- Question 5 -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5. What is the main purpose of encryption?"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
-
-            <RadioGroup
-                android:id="@+id/rgQ5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp">
-                <RadioButton android:id="@+id/q5a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A) To make a computer run faster" />
-                <RadioButton android:id="@+id/q5b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="B) To convert data into a form that unauthorized users cannot easily understand" />
-                <RadioButton android:id="@+id/q5c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="C) To delete unnecessary files" />
-                <RadioButton android:id="@+id/q5d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="D) To increase storage capacity" />
-            </RadioGroup>
-
-            <Button
-                android:id="@+id/btnSubmit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Submit Quiz" />
+            </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
+
 </layout>
