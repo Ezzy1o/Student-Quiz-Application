@@ -24,10 +24,10 @@ class QuizActivity : AppCompatActivity() {
         Question(
             "What is the main purpose of a firewall?",
             listOf(
-                "A) To increase internet speed",
-                "B) To protect a network by controlling incoming and outgoing traffic",
-                "C) To create a backup of files",
-                "D) To remove unused applications"
+                "To increase internet speed",
+                "To protect a network by controlling incoming and outgoing traffic",
+                "To create a backup of files",
+                "To remove unused applications"
             ),
             1
         ),
@@ -35,10 +35,10 @@ class QuizActivity : AppCompatActivity() {
         Question(
             "What is phishing?",
             listOf(
-                "A) A method of encrypting files",
-                "B) A type of network cable",
-                "C) An attempt to trick users into revealing sensitive information",
-                "D) A method of creating strong passwords"
+                "A method of encrypting files",
+                "A type of network cable",
+                "An attempt to trick users into revealing sensitive information",
+                "A method of creating strong passwords"
             ),
             2
         ),
@@ -46,10 +46,10 @@ class QuizActivity : AppCompatActivity() {
         Question(
             "Which of the following is the strongest password?",
             listOf(
-                "A) password123",
-                "B) 12345678",
-                "C) admin2026",
-                "D) T!g8#Qz2@Lm9"
+                "password123",
+                "12345678",
+                "admin2026",
+                "T!g8#Qz2@Lm9"
             ),
             3
         ),
@@ -57,10 +57,10 @@ class QuizActivity : AppCompatActivity() {
         Question(
             "What is malware?",
             listOf(
-                "A) Software designed to harm, disrupt, or gain unauthorized access to a computer system",
-                "B) Software used to edit documents",
-                "C) A secure type of password",
-                "D) A network monitoring device"
+                "Software designed to harm, disrupt, or gain unauthorized access to a computer system",
+                "Software used to edit documents",
+                "A secure type of password",
+                "A network monitoring device"
             ),
             0
         ),
@@ -68,10 +68,10 @@ class QuizActivity : AppCompatActivity() {
         Question(
             "What is the main purpose of encryption?",
             listOf(
-                "A) To make a computer run faster",
-                "B) To convert data into a form that unauthorized users cannot easily understand",
-                "C) To delete unnecessary files",
-                "D) To increase storage capacity"
+                "To make a computer run faster",
+                "To convert data into a form that unauthorized users cannot easily understand",
+                "To delete unnecessary files",
+                "To increase storage capacity"
             ),
             1
         )
@@ -102,7 +102,7 @@ class QuizActivity : AppCompatActivity() {
             bundleFromMain?.getString("EXTRA_NAME", "Student")
                 ?: "Student"
 
-        binding.tvWelcome.text = "Student: $studentName"
+        binding.tvWelcome.text = "Hi, $studentName 👋"
 
         showQuestion()
 
@@ -171,11 +171,13 @@ class QuizActivity : AppCompatActivity() {
         }
 
         binding.btnPrevious.isEnabled = currentQuestion > 0
+        binding.btnPrevious.alpha =
+            if (currentQuestion > 0) 1.0f else 0.4f
 
         if (currentQuestion == questions.size - 1) {
-            binding.btnNext.text = "Submit Quiz"
+            binding.btnNext.text = getString(R.string.submit_quiz)
         } else {
-            binding.btnNext.text = "Next"
+            binding.btnNext.text = getString(R.string.btn_next)
         }
     }
 

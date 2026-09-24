@@ -2,7 +2,7 @@
 
     <string name="app_name">Student Quiz Application</string>
 
-    <string name="quiz_badge">CYBER SECURITY • QUIZ 01</string>
+    <string name="quiz_badge">CYBER SECURITY &#8226; QUIZ</string>
 
     <string name="quiz_title">Test your cyber&#10;security knowledge.</string>
 
@@ -12,7 +12,7 @@
 
     <string name="questions_count">5 Questions</string>
 
-    <string name="separator_dot">•</string>
+    <string name="separator_dot">&#8226;</string>
 
     <string name="points_count">100 Points</string>
 
@@ -24,17 +24,23 @@
 
     <string name="enter_name">Enter your name</string>
 
-    <string name="start_quiz">START QUIZ →</string>
+    <string name="start_quiz">START QUIZ &#8594;</string>
 
-    <string name="footer_text">LEARN • TEST • SCORE</string>
+    <string name="btn_previous">&#8592; PREVIOUS</string>
 
-    <string name="result_badge">CYBER SECURITY • RESULT</string>
+    <string name="btn_next">NEXT &#8594;</string>
+
+    <string name="submit_quiz">SUBMIT QUIZ &#8594;</string>
+
+    <string name="footer_text">LEARN &#8226; TEST &#8226; SCORE</string>
+
+    <string name="result_badge">CYBER SECURITY &#8226; RESULT</string>
 
     <string name="result_title">Quiz completed!</string>
 
     <string name="result_subtitle">
-    Here is your final result for the cyber security quiz.
-</string>
+        Here is your final result for the cyber security quiz.
+    </string>
 
     <string name="result_completed">QUIZ COMPLETED</string>
 
@@ -45,13 +51,13 @@
     <string name="result_score_placeholder">Your Score: 0 / 100</string>
 
     <string name="result_score_caption">
-    Every question is worth 20 points.
-</string>
+        Every question is worth 20 points.
+    </string>
 
     <string name="result_message">
-    Great effort! Keep learning and improving your cyber security knowledge.
-</string>
+        Great effort! Keep learning and improving your cyber security knowledge.
+    </string>
 
-    <string name="try_again">TRY AGAIN  ↻</string>
+    <string name="try_again">TRY AGAIN  &#8635;</string>
 
 </resources>
