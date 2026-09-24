@@ -1,57 +1,48 @@
 <resources>
+    <string name="quiz_badge">MALAYSIA • GENERAL KNOWLEDGE</string>
 
-    <string name="app_name">Student Quiz Application</string>
-
-    <string name="quiz_badge">CYBER SECURITY • QUIZ 01</string>
-
-    <string name="quiz_title">Test your cyber&#10;security knowledge.</string>
+    <string name="quiz_title">How well do you&#10;know Malaysia?</string>
 
     <string name="quiz_subtitle">
-        A quick quiz to see how well you know the basics of cyber security.
+        Test your knowledge about Malaysia, from geography to national symbols.
     </string>
 
     <string name="questions_count">5 Questions</string>
-
     <string name="separator_dot">•</string>
-
     <string name="points_count">100 Points</string>
 
     <string name="get_started">LET\'S GET STARTED</string>
-
     <string name="call_you">What should we call you?</string>
-
     <string name="your_name">Your name</string>
-
     <string name="enter_name">Enter your name</string>
-
     <string name="start_quiz">START QUIZ →</string>
 
     <string name="footer_text">LEARN • TEST • SCORE</string>
 
-    <string name="result_badge">CYBER SECURITY • RESULT</string>
+    <string name="quiz_badge_quiz">MALAYSIA • QUIZ</string>
+    <string name="quiz_welcome_default">Hi, Student 👋</string>
+    <string name="quiz_prev">← PREVIOUS</string>
+    <string name="quiz_next">NEXT →</string>
 
+    <string name="result_badge">MALAYSIA • QUIZ RESULT</string>
     <string name="result_title">Quiz completed!</string>
 
     <string name="result_subtitle">
-    Here is your final result for the cyber security quiz.
-</string>
+        Here is your final result for the Malaysia General Knowledge Quiz.
+    </string>
 
     <string name="result_completed">QUIZ COMPLETED</string>
-
     <string name="result_name_placeholder">Congratulations, Student!</string>
-
     <string name="result_your_score">YOUR SCORE</string>
-
-    <string name="result_score_placeholder">Your Score: 0 / 100</string>
+    <string name="result_score_placeholder">0 / 100</string>
 
     <string name="result_score_caption">
-    Every question is worth 20 points.
-</string>
+        Every question is worth 20 points.
+    </string>
 
     <string name="result_message">
-    Great effort! Keep learning and improving your cyber security knowledge.
-</string>
+        Great effort! Keep exploring and learning more about Malaysia.
+    </string>
 
-    <string name="try_again">TRY AGAIN  ↻</string>
-
+    <string name="try_again">TRY AGAIN ↻</string>
 </resources>
